@@ -1,0 +1,96 @@
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* hide theme chrome for a distraction-free landing */
+body .wp-block-template-part,body header.wp-block-template-part,body footer.wp-block-template-part,body .wp-site-blocks>header,body .wp-site-blocks>footer{display:none!important}
+body .entry-header,body .wp-block-post-title{display:none!important}
+body .entry-content,body .wp-block-post-content,body .is-layout-constrained,body .wp-site-blocks{max-width:none!important;margin:0!important;padding:0!important}
+html,body{margin:0!important;padding:0!important;background:#0c2420!important}
+.ge-lp *{box-sizing:border-box}
+.ge-lp{
+  --teal-0:#0c2420;--teal-1:#123531;--teal-2:#17423c;--gold:#d4af37;--gold-lt:#f0d47a;--gold-soft:#e6c15a;--ink:#eef4f1;--muted:#a4bdb6;--line:rgba(212,175,55,.30);
+  position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw;min-height:100vh;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--ink);
+  background:radial-gradient(1200px 700px at 78% -8%,rgba(212,175,55,.16),transparent 55%),radial-gradient(900px 600px at 8% 108%,rgba(212,175,55,.08),transparent 55%),linear-gradient(160deg,var(--teal-0),var(--teal-1) 55%,var(--teal-2));
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+.ge-lp .wrap{max-width:1120px;margin:0 auto;padding:28px 22px 40px}
+.ge-lp .brand{display:flex;align-items:center;gap:10px;font-family:'Oswald',sans-serif;letter-spacing:.32em;font-weight:600;font-size:15px;color:var(--gold-soft);text-transform:uppercase}
+.ge-lp .brand .crown{font-size:16px;letter-spacing:0}
+.ge-lp .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;margin-top:34px}
+.ge-lp .eyebrow{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;color:var(--gold-soft);font-size:22px;margin:0 0 10px}
+.ge-lp h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:52px;line-height:1.02;letter-spacing:.005em;margin:0 0 18px;color:#fff}
+.ge-lp .lede{font-size:18px;line-height:1.6;color:var(--muted);margin:0 0 24px;max-width:33em}
+.ge-lp .lede b{color:var(--ink);font-weight:600}
+.ge-lp ul.benefits{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:13px}
+.ge-lp ul.benefits li{position:relative;padding-left:34px;font-size:16px;line-height:1.45;color:var(--ink)}
+.ge-lp ul.benefits li::before{content:"";position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--gold-lt),var(--gold));box-shadow:0 2px 8px rgba(212,175,55,.4)}
+.ge-lp ul.benefits li::after{content:"";position:absolute;left:7px;top:8px;width:6px;height:10px;border:solid var(--teal-0);border-width:0 2.4px 2.4px 0;transform:rotate(42deg)}
+.ge-lp .card{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:18px;padding:22px 22px 18px;backdrop-filter:blur(6px);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.ge-lp .card h2{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:19px;margin:0 0 4px;color:#fff}
+.ge-lp .card .sub{font-size:13.5px;color:var(--muted);margin:0 0 16px}
+.ge-lp .microcopy{font-size:12.5px;color:var(--muted);text-align:center;margin:2px 0 0}
+.ge-lp .eo .emailoctopus-form,.ge-lp .eo .main-form{margin:0}
+.ge-lp .eo .main-form{display:flex!important;flex-direction:column!important;align-items:stretch!important}
+.ge-lp .eo .main-form>div{width:100%!important;max-width:none!important;flex:none!important;display:block!important}
+.ge-lp .eo .emailoctopus-form-row.form-group{margin-bottom:12px!important;width:100%!important;max-width:none!important}
+.ge-lp .eo .form-control{width:100%!important;box-sizing:border-box!important;padding:15px 16px!important;font-size:16px!important;border-radius:11px!important;border:1px solid #ccd8d4!important;background:#fff!important;color:#0d2521!important;font-family:inherit!important;outline:none!important;box-shadow:none!important}
+.ge-lp .eo .form-control:focus{border-color:var(--gold)!important;box-shadow:0 0 0 3px rgba(212,175,55,.25)!important}
+.ge-lp .eo .form-control::placeholder{color:#8aa0a0}
+.ge-lp .eo input.btn,.ge-lp .eo .btn-primary{width:100%!important;padding:16px 18px;font-size:16.5px;font-weight:700;font-family:'Oswald',sans-serif;letter-spacing:.05em;text-transform:uppercase;border:none;border-radius:11px;cursor:pointer;color:#0d2521!important;background:linear-gradient(180deg,var(--gold-lt),var(--gold))!important;box-shadow:0 10px 26px rgba(212,175,55,.38)}
+.ge-lp .eo input.btn:hover,.ge-lp .eo .btn-primary:hover{filter:brightness(1.06)}
+.ge-lp .eo .emailoctopus-form-row-hp{display:none!important}
+.ge-lp .eo .inline-container>p:last-child{opacity:.5;font-size:11px;margin:8px 0 0;text-align:center}
+.ge-lp .mock{display:flex;justify-content:center}
+.ge-lp .mock .sheet{width:min(340px,80vw);border-radius:8px;overflow:hidden;border:1px solid rgba(240,212,122,.45);box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 1px rgba(0,0,0,.2);transform:rotate(2.4deg)}
+.ge-lp .mock .sheet img{display:block;width:100%;height:auto}
+.ge-lp .mock .tag{position:relative}
+.ge-lp .badge{position:absolute;left:50%;transform:translateX(-50%);top:-14px;background:linear-gradient(180deg,var(--gold-lt),var(--gold));color:#0d2521;font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:12px;padding:6px 14px;border-radius:100px;box-shadow:0 8px 20px rgba(212,175,55,.4);z-index:2;white-space:nowrap}
+.ge-lp .disc{margin-top:30px;font-size:12.5px;color:#8aa39c;text-align:center;line-height:1.5;border-top:1px solid rgba(255,255,255,.08);padding-top:18px;max-width:640px;margin-left:auto;margin-right:auto}
+.ge-lp .foot{text-align:center;font-family:'Oswald',sans-serif;letter-spacing:.28em;font-size:12px;color:#6f8983;text-transform:uppercase;margin-top:14px}
+@media(max-width:860px){
+  .ge-lp .hero{grid-template-columns:1fr;gap:34px;margin-top:24px}
+  .ge-lp .hero .col-copy{order:2}
+  .ge-lp .hero .col-mock{order:1}
+  .ge-lp h1{font-size:38px}
+  .ge-lp .eyebrow{font-size:19px}
+  .ge-lp .lede{font-size:16.5px}
+  .ge-lp .mock .sheet{width:min(260px,66vw);transform:rotate(0deg)}
+  .ge-lp .brand{justify-content:center}
+}
+</style>
+<div class="ge-lp">
+  <div class="wrap">
+    <div class="brand"><span>Gold Empire</span><span class="crown">&#128081;</span></div>
+    <div class="hero">
+      <div class="col-copy">
+        <p class="eyebrow">Survive First.</p>
+        <h1>The Gold Trader's<br>Survival Sheet</h1>
+        <p class="lede">A free 1-page PDF. You don't have a signal problem &mdash; you have a <b>survival problem</b>. Five rules, one formula, and a 20-second check that keep gold traders in the game.</p>
+        <ul class="benefits">
+          <li>The <b>1% rule</b> that sets your risk <i>before</i> you ever click buy</li>
+          <li>The <b>20-second pre-trade check</b> to run on every setup</li>
+          <li>The <b>position-size formula</b>, in plain numbers</li>
+          <li>Why one rough day never has to blow up your account</li>
+        </ul>
+        <div class="card">
+          <h2>Send it to my inbox &mdash; free</h2>
+          <p class="sub">Enter your email and I'll send the sheet straight over.</p>
+          <div class="eo">
+            <script async src="https://eomail6.com/form/08019784-7a77-11f1-a5c2-2d3cdec74a32.js" data-form="08019784-7a77-11f1-a5c2-2d3cdec74a32"></script>
+          </div>
+          <p class="microcopy">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+      <div class="col-mock">
+        <div class="mock">
+          <div class="tag">
+            <span class="badge">Free &middot; 1-page PDF</span>
+            <div class="sheet"><img src="https://buithithuytrinhfamily-sketch.github.io/ge-survival-sheet/survival-cover.jpg" alt="The Gold Trader's Survival Sheet cover"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="disc">Trading gold and other leveraged products carries significant risk and can result in the loss of your capital. The Survival Sheet is educational material only &mdash; it is not financial advice, and it is not a promise of profit.</p>
+    <p class="foot">Gold Empire &middot; Matthew</p>
+  </div>
+</div>
