@@ -3,12 +3,12 @@
 /* hide theme chrome for a distraction-free landing */
 body .wp-block-template-part,body header.wp-block-template-part,body footer.wp-block-template-part,body .wp-site-blocks>header,body .wp-site-blocks>footer{display:none!important}
 body .entry-header,body .wp-block-post-title{display:none!important}
-body .entry-content,body .wp-block-post-content,body .is-layout-constrained,body .wp-site-blocks{max-width:none!important;margin:0!important;padding:0!important}
+body .entry-content,body .wp-block-post-content,body .is-layout-constrained,body .wp-site-blocks,body .has-global-pad,body .ge-lp{max-width:none!important;margin:0!important;padding:0!important}
 html,body{margin:0!important;padding:0!important;background:#0c2420!important}
 .ge-lp *{box-sizing:border-box}
 .ge-lp{
   --teal-0:#0c2420;--teal-1:#123531;--teal-2:#17423c;--gold:#d4af37;--gold-lt:#f0d47a;--gold-soft:#e6c15a;--ink:#eef4f1;--muted:#a4bdb6;--line:rgba(212,175,55,.30);
-  position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw;min-height:100vh;
+  position:relative;width:100%;max-width:none!important;min-height:100vh;
   font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--ink);
   background:radial-gradient(1200px 700px at 78% -8%,rgba(212,175,55,.16),transparent 55%),radial-gradient(900px 600px at 8% 108%,rgba(212,175,55,.08),transparent 55%),linear-gradient(160deg,var(--teal-0),var(--teal-1) 55%,var(--teal-2));
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
@@ -41,10 +41,7 @@ html,body{margin:0!important;padding:0!important;background:#0c2420!important}
 .ge-lp .eo .emailoctopus-form-row-hp{display:none!important}
 .ge-lp .eo .inline-container>p:last-child{opacity:.5;font-size:11px;margin:8px 0 0;text-align:center}
 .ge-lp .mock{display:flex;justify-content:center}
-.ge-lp .mock .sheet{width:min(340px,80vw);border-radius:8px;overflow:hidden;border:1px solid rgba(240,212,122,.45);box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 1px rgba(0,0,0,.2);transform:rotate(2.4deg)}
-.ge-lp .mock .sheet img{display:block;width:100%;height:auto}
-.ge-lp .mock .tag{position:relative}
-.ge-lp .badge{position:absolute;left:50%;transform:translateX(-50%);top:-14px;background:linear-gradient(180deg,var(--gold-lt),var(--gold));color:#0d2521;font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:12px;padding:6px 14px;border-radius:100px;box-shadow:0 8px 20px rgba(212,175,55,.4);z-index:2;white-space:nowrap}
+.ge-lp .mock .sheet-img{display:block;width:min(440px,92vw);height:auto;border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
 .ge-lp .disc{margin-top:30px;font-size:12.5px;color:#8aa39c;text-align:center;line-height:1.5;border-top:1px solid rgba(255,255,255,.08);padding-top:18px;max-width:640px;margin-left:auto;margin-right:auto}
 .ge-lp .foot{text-align:center;font-family:'Oswald',sans-serif;letter-spacing:.28em;font-size:12px;color:#6f8983;text-transform:uppercase;margin-top:14px}
 @media(max-width:860px){
@@ -54,7 +51,7 @@ html,body{margin:0!important;padding:0!important;background:#0c2420!important}
   .ge-lp h1{font-size:38px}
   .ge-lp .eyebrow{font-size:19px}
   .ge-lp .lede{font-size:16.5px}
-  .ge-lp .mock .sheet{width:min(260px,66vw);transform:rotate(0deg)}
+  .ge-lp .mock .sheet-img{width:min(320px,80vw)}
   .ge-lp .brand{justify-content:center}
 }
 </style>
@@ -83,10 +80,7 @@ html,body{margin:0!important;padding:0!important;background:#0c2420!important}
       </div>
       <div class="col-mock">
         <div class="mock">
-          <div class="tag">
-            <span class="badge">Free &middot; 1-page PDF</span>
-            <div class="sheet"><img src="https://buithithuytrinhfamily-sketch.github.io/ge-survival-sheet/survival-cover.jpg" alt="The Gold Trader's Survival Sheet cover"></div>
-          </div>
+          <img class="sheet-img" src="https://buithithuytrinhfamily-sketch.github.io/ge-survival-sheet/survival-cover-3d.jpg" alt="The Gold Trader's Survival Sheet — free 1-page PDF">
         </div>
       </div>
     </div>

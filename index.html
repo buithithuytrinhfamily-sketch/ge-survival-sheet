@@ -77,17 +77,8 @@ ul.benefits li::after{content:"";position:absolute;left:7px;top:8px;width:6px;he
 .eo .inline-container>p:last-child{opacity:.5;font-size:11px;margin:8px 0 0;text-align:center}
 /* cover mockup */
 .mock{display:flex;justify-content:center}
-.mock .sheet{width:min(340px,80vw);border-radius:8px;overflow:hidden;
-  border:1px solid rgba(240,212,122,.45);
-  box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 1px rgba(0,0,0,.2);
-  transform:rotate(2.4deg);transition:transform .3s}
-.mock .sheet:hover{transform:rotate(0deg) scale(1.015)}
-.mock .sheet img{display:block;width:100%;height:auto}
-.mock .tag{position:relative}
-.badge{position:absolute;left:50%;transform:translateX(-50%);top:-14px;
-  background:linear-gradient(180deg,var(--gold-lt),var(--gold));color:#0d2521;font-family:'Oswald',sans-serif;
-  font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:12px;padding:6px 14px;border-radius:100px;
-  box-shadow:0 8px 20px rgba(212,175,55,.4);z-index:2;white-space:nowrap}
+.mock .sheet-img{display:block;width:min(440px,92vw);height:auto;border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.5);transition:transform .3s}
+.mock .sheet-img:hover{transform:scale(1.015)}
 /* disclaimer + footer */
 .disc{margin-top:30px;font-size:12.5px;color:#8aa39c;text-align:center;line-height:1.5;
   border-top:1px solid rgba(255,255,255,.08);padding-top:18px;max-width:640px;margin-left:auto;margin-right:auto}
@@ -100,7 +91,7 @@ ul.benefits li::after{content:"";position:absolute;left:7px;top:8px;width:6px;he
   h1{font-size:38px}
   .eyebrow{font-size:19px}
   .lede{font-size:16.5px}
-  .mock .sheet{width:min(260px,66vw);transform:rotate(0deg)}
+  .mock .sheet-img{width:min(320px,80vw)}
   .brand{justify-content:center}
 }
 </style>
@@ -133,10 +124,7 @@ ul.benefits li::after{content:"";position:absolute;left:7px;top:8px;width:6px;he
 
     <div class="col-mock">
       <div class="mock">
-        <div class="tag">
-          <span class="badge">Free · 1-page PDF</span>
-          <div class="sheet"><img src="survival-cover.jpg" alt="The Gold Trader's Survival Sheet cover"></div>
-        </div>
+        <img class="sheet-img" src="survival-cover-3d.jpg" alt="The Gold Trader's Survival Sheet — free 1-page PDF">
       </div>
     </div>
   </div>
