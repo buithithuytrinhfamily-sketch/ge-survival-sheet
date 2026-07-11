@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gold Empire — Candlestick Infographics</title>
+<title>Gold Empire — Candlestick Infographics (7 slides)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,173 +16,156 @@
   --down:#cf4638;    /* bearish candle — red */
   --good:#5bbf7a;    /* check green */
   --bad:#e5573f;     /* cross red  */
+  --ecg:#e2554a;     /* heartbeat line */
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
   font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  color:var(--ink);
-  background:#081a17;
-  -webkit-font-smoothing:antialiased;
+  color:var(--ink);background:#081a17;-webkit-font-smoothing:antialiased;
   display:flex;flex-direction:column;align-items:center;gap:34px;padding:34px 0 60px;
 }
-/* ---- the shareable canvas: 1080 x 1350 (Facebook 4:5) ---- */
+/* ---- shareable canvas: 1080 x 1350 (Facebook 4:5) ---- */
 .slide{
   position:relative;width:1080px;height:1350px;overflow:hidden;
   background:
     radial-gradient(1300px 780px at 82% -10%, rgba(212,175,55,.16), transparent 55%),
     radial-gradient(1000px 700px at 4% 112%, rgba(212,175,55,.08), transparent 55%),
     linear-gradient(160deg, var(--teal-0), var(--teal-1) 55%, var(--teal-2));
-  box-shadow:0 30px 80px rgba(0,0,0,.5);
-  padding:66px 70px 58px;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);padding:64px 70px 58px;
 }
-.slide::before{ /* thin gold inner frame */
-  content:"";position:absolute;inset:26px;border:1px solid var(--line);border-radius:20px;pointer-events:none;
-}
+.slide::before{content:"";position:absolute;inset:26px;border:1px solid var(--line);border-radius:20px;pointer-events:none}
 /* header */
 .brand{display:flex;align-items:center;gap:11px;font-family:'Oswald',sans-serif;
   letter-spacing:.34em;font-weight:600;font-size:20px;color:var(--gold-soft);text-transform:uppercase;position:relative;z-index:2}
 .brand .crown{font-size:20px;letter-spacing:0}
 .brand .num{margin-left:auto;font-family:'Oswald';letter-spacing:.12em;font-size:16px;color:var(--muted)}
 .eyebrow{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;color:var(--gold-soft);
-  font-size:30px;margin:40px 0 6px;position:relative;z-index:2}
+  font-size:29px;margin:34px 0 6px;position:relative;z-index:2}
 h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;line-height:.98;
   letter-spacing:.01em;margin:0;color:#fff;position:relative;z-index:2}
-.title-xl{font-size:82px}
-.title-lg{font-size:66px}
+.title-xl{font-size:80px}
+.title-lg{font-size:64px}
 .accent{color:var(--gold)}
-.rule{height:2px;width:120px;background:linear-gradient(90deg,var(--gold),transparent);margin:22px 0 0;border-radius:2px;position:relative;z-index:2}
-/* footer signature */
+.rule{height:2px;width:120px;background:linear-gradient(90deg,var(--gold),transparent);margin:20px 0 0;border-radius:2px;position:relative;z-index:2}
 .sig{position:absolute;left:0;right:0;bottom:40px;text-align:center;font-family:'Oswald',sans-serif;
   letter-spacing:.3em;font-size:15px;color:#7c968f;text-transform:uppercase;z-index:2}
 .sig b{color:var(--gold-soft);font-weight:600}
 
 /* ===== candlestick primitives ===== */
-.candle{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
+.candle{display:flex;flex-direction:column;align-items:center;justify-content:center}
 .candle .w{width:4px;background:currentColor;border-radius:3px}
 .candle .b{width:52px;background:currentColor;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
-.bull{color:var(--up)}
-.bear{color:var(--down)}
+.bull{color:var(--up)} .bear{color:var(--down)}
 
 /* ===== SLIDE 1 : WHO IS IN CONTROL ===== */
-.grid8{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;
-  gap:20px 8px;margin-top:40px;position:relative;z-index:2}
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:20px 8px;margin-top:38px;position:relative;z-index:2}
 .cell{display:flex;flex-direction:column;align-items:center;text-align:center}
 .mark{font-family:'Oswald';font-size:34px;font-weight:700;line-height:1;height:40px}
 .mark.ok{color:var(--good)} .mark.no{color:var(--bad)}
 .stage{height:230px;width:100%;display:flex;align-items:center;justify-content:center}
-.cap{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:15.5px;
-  line-height:1.18;letter-spacing:.02em;margin-top:12px;color:var(--ink);min-height:74px;padding:0 4px}
+.cap{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:15.5px;line-height:1.18;letter-spacing:.02em;margin-top:12px;color:var(--ink);min-height:74px;padding:0 4px}
 .cap .g{color:var(--gold-soft)}
-.legend{display:flex;justify-content:center;gap:40px;margin-top:34px;position:relative;z-index:2}
+.legend{display:flex;justify-content:center;gap:40px;margin-top:30px;position:relative;z-index:2}
 .legend div{display:flex;align-items:center;gap:11px;font-size:16px;color:var(--muted);font-weight:500}
 .chip{width:26px;height:26px;border-radius:6px}
 .chip.up{background:var(--up)} .chip.dn{background:var(--down)}
 
 /* ===== SLIDE 2 : BREAKOUTS ===== */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:30px;position:relative;z-index:2}
+.two{display:grid;grid-template-columns:1fr 1fr;margin-top:30px;position:relative;z-index:2}
 .two .col{position:relative;padding:20px 26px 0}
 .two .col:first-child{border-right:1px dashed var(--line)}
 .panel{position:relative;height:520px}
-.seq{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;gap:18px;padding-bottom:0}
+.seq{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;gap:18px}
 .lvl{position:absolute;left:6px;right:6px;border-top:2px dashed rgba(164,189,182,.55)}
-.lvl span{position:absolute;left:0;top:-13px;font-family:'Oswald';font-size:17px;color:var(--muted);background:transparent;padding-right:6px}
+.lvl span{position:absolute;left:0;top:-13px;font-family:'Oswald';font-size:17px;color:var(--muted);padding-right:6px}
 .verdict{text-align:center;margin-top:14px}
 .verdict .big{font-family:'Oswald';font-weight:700;text-transform:uppercase;font-size:30px;letter-spacing:.02em}
 .verdict .sub{font-family:'Oswald';font-weight:500;text-transform:uppercase;font-size:15px;color:var(--muted);letter-spacing:.06em;margin-top:4px}
 .verdict.no .big{color:var(--bad)} .verdict.ok .big{color:var(--good)}
-.foot-note{margin-top:44px;text-align:center;font-size:20px;line-height:1.5;color:var(--ink);
-  position:relative;z-index:2;padding:0 20px}
+.foot-note{margin-top:40px;text-align:center;font-size:20px;line-height:1.5;color:var(--ink);position:relative;z-index:2;padding:0 20px}
 .foot-note .g{color:var(--gold-soft);font-weight:600}
 .tag{position:absolute;font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:14px;letter-spacing:.05em}
 
-/* ===== SLIDE 3 : PIERCING ===== */
-.quad{display:grid;grid-template-columns:1fr 1fr;margin-top:26px;position:relative;z-index:2}
-.quad .q{padding:26px 30px 0;position:relative}
-.quad .q:first-child{border-right:1px dashed var(--line)}
-.qhead{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:10px}
-.qhead .ck{color:var(--good);font-size:30px;font-weight:700;font-family:'Oswald'}
-.qhead h3{font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:24px;margin:0;color:var(--gold-soft);letter-spacing:.02em}
+/* ===== SLIDE 3 & 4 : quadrant layouts ===== */
+.quad{display:grid;grid-template-columns:1fr 1fr;margin-top:24px;position:relative;z-index:2}
+.quad .q{padding:22px 30px 0;position:relative}
+.quad.rows2 .q{padding:16px 30px}
+.quad .q.bl,.quad .q.tl{border-right:1px dashed var(--line)}
+.quad.rows2 .q.tl,.quad.rows2 .q.tr{border-bottom:1px dashed var(--line)}
+.qhead{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:8px}
+.qhead .ck{color:var(--good);font-size:28px;font-weight:700;font-family:'Oswald'}
+.qhead h3{font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:23px;margin:0;color:var(--gold-soft);letter-spacing:.02em}
 .pierce{position:relative;height:520px;display:flex;align-items:center;justify-content:center;gap:26px}
 .pierce .lvl50{position:absolute;left:20px;right:20px;top:50%;border-top:2px dotted rgba(164,189,182,.6)}
 .pierce .lvl50 span{position:absolute;left:0;top:-13px;font-family:'Oswald';font-size:17px;color:var(--muted)}
-.arrow{position:absolute;font-size:38px;line-height:1}
+.arrow{position:absolute;font-size:36px;line-height:1}
 .qcap{text-align:center;font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:22px;color:var(--ink);margin-top:8px;letter-spacing:.03em}
-.explain{margin-top:40px;text-align:center;font-size:20px;line-height:1.5;color:var(--ink);position:relative;z-index:2;padding:0 30px}
+.explain{margin-top:36px;text-align:center;font-size:20px;line-height:1.5;color:var(--ink);position:relative;z-index:2;padding:0 30px}
 .explain .g{color:var(--gold-soft);font-weight:600}
+
+/* confirmation quadrant (slide 4) */
+.cq{position:relative;height:330px;display:flex;align-items:center;justify-content:center;gap:22px}
+.ctext{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:19px;line-height:1.25;letter-spacing:.02em;text-align:center;margin-top:6px;color:var(--ink)}
+.ctext .g{color:var(--gold-soft)}
+.p4 .b{width:46px}
+
+/* ===== SLIDE 5 : TRIPLE ===== */
+.g6{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px 0;margin-top:30px;position:relative;z-index:2}
+.g6 .c{position:relative;display:flex;flex-direction:column;align-items:center;padding:10px 8px 6px}
+.g6 .c.bd-r{border-right:1px dashed var(--line)}
+.g6 .c.bd-b{border-bottom:1px dashed var(--line)}
+.pat{display:flex;align-items:flex-end;justify-content:center;gap:9px;height:250px}
+.p5 .b{width:30px} .p5 .w{width:3px}
+.capp{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:20px;letter-spacing:.03em;margin-top:12px;color:var(--ink);text-align:center;line-height:1.15}
+.capp .g{color:var(--gold-soft)}
+.parr{position:absolute;font-size:26px;line-height:1;font-family:'Oswald'}
+
+/* ===== SLIDE 6 : BULLISH LIBRARY ===== */
+.g12{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);gap:6px 0;margin-top:26px;position:relative;z-index:2}
+.g12 .c{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:8px 6px}
+.patm{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:170px}
+.p6 .b{width:19px;border-radius:3px} .p6 .w{width:3px}
+.capm{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:16px;letter-spacing:.02em;margin-top:8px;color:var(--ink);text-align:center;line-height:1.12;min-height:38px}
+.capm .g{color:var(--gold-soft)}
+
+/* ===== SLIDE 7 : HEARTBEAT ===== */
+.hbwrap{position:relative;z-index:2;margin-top:20px}
+.hblabel{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:34px;letter-spacing:.02em;color:#fff;margin:26px 0 4px}
+.hblabel .g{color:var(--gold-soft)}
+.hbline{width:100%;height:200px;display:block}
+.hbchart{position:absolute;display:flex;align-items:center;justify-content:center;gap:6px;height:150px}
 </style>
 </head>
 <body>
 
 <!-- ================= SLIDE 1 ================= -->
 <section class="slide" id="s1">
-  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">01 / 03</span></div>
+  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">01 / 07</span></div>
   <p class="eyebrow">Read the candle before you click buy.</p>
   <h1 class="title-xl">WHO IS<br>IN <span class="accent">CONTROL?</span></h1>
   <div class="rule"></div>
-
   <div class="grid8">
-    <!-- row 1 -->
-    <div class="cell">
-      <div class="mark ok">&#10003;</div>
-      <div class="stage"><div class="candle bull"><div class="w" style="height:16px"></div><div class="b" style="height:150px"></div><div class="w" style="height:16px"></div></div></div>
-      <div class="cap">Buyers are in <span class="g">total control</span></div>
-    </div>
-    <div class="cell">
-      <div class="mark ok">&#10003;</div>
-      <div class="stage"><div class="candle bull"><div class="w" style="height:12px"></div><div class="b" style="height:54px"></div><div class="w" style="height:120px"></div></div></div>
-      <div class="cap">Sellers were active but got <span class="g">rejected by the buyers</span></div>
-    </div>
-    <div class="cell">
-      <div class="mark no">&#10007;</div>
-      <div class="stage"><div class="candle bull"><div class="w" style="height:120px"></div><div class="b" style="height:60px"></div><div class="w" style="height:12px"></div></div></div>
-      <div class="cap">Buyers won but there is <span class="g">no clear direction</span></div>
-    </div>
-    <div class="cell">
-      <div class="mark no">&#10007;</div>
-      <div class="stage"><div class="candle bull"><div class="w" style="height:14px"></div><div class="b" style="height:34px"></div><div class="w" style="height:150px"></div></div></div>
-      <div class="cap">Too much <span class="g">selling pressure</span> to buy on this candle</div>
-    </div>
-    <!-- row 2 -->
-    <div class="cell">
-      <div class="mark ok">&#10003;</div>
-      <div class="stage"><div class="candle bear"><div class="w" style="height:16px"></div><div class="b" style="height:150px"></div><div class="w" style="height:16px"></div></div></div>
-      <div class="cap">Sellers are in <span class="g">total control</span></div>
-    </div>
-    <div class="cell">
-      <div class="mark no">&#10007;</div>
-      <div class="stage"><div class="candle bear"><div class="w" style="height:120px"></div><div class="b" style="height:54px"></div><div class="w" style="height:12px"></div></div></div>
-      <div class="cap">Sellers were active but got <span class="g">rejected by buyers</span></div>
-    </div>
-    <div class="cell">
-      <div class="mark no">&#10007;</div>
-      <div class="stage"><div class="candle bear"><div class="w" style="height:12px"></div><div class="b" style="height:60px"></div><div class="w" style="height:120px"></div></div></div>
-      <div class="cap">Sellers won but there is <span class="g">no clear direction</span></div>
-    </div>
-    <div class="cell">
-      <div class="mark ok">&#10003;</div>
-      <div class="stage"><div class="candle bear"><div class="w" style="height:130px"></div><div class="b" style="height:34px"></div><div class="w" style="height:14px"></div></div></div>
-      <div class="cap">Buyers showed up but <span class="g">sellers are in control</span></div>
-    </div>
+    <div class="cell"><div class="mark ok">&#10003;</div><div class="stage"><div class="candle bull"><div class="w" style="height:16px"></div><div class="b" style="height:150px"></div><div class="w" style="height:16px"></div></div></div><div class="cap">Buyers are in <span class="g">total control</span></div></div>
+    <div class="cell"><div class="mark ok">&#10003;</div><div class="stage"><div class="candle bull"><div class="w" style="height:12px"></div><div class="b" style="height:54px"></div><div class="w" style="height:120px"></div></div></div><div class="cap">Sellers were active but got <span class="g">rejected by the buyers</span></div></div>
+    <div class="cell"><div class="mark no">&#10007;</div><div class="stage"><div class="candle bull"><div class="w" style="height:120px"></div><div class="b" style="height:60px"></div><div class="w" style="height:12px"></div></div></div><div class="cap">Buyers won but there is <span class="g">no clear direction</span></div></div>
+    <div class="cell"><div class="mark no">&#10007;</div><div class="stage"><div class="candle bull"><div class="w" style="height:14px"></div><div class="b" style="height:34px"></div><div class="w" style="height:150px"></div></div></div><div class="cap">Too much <span class="g">selling pressure</span> to buy on this candle</div></div>
+    <div class="cell"><div class="mark ok">&#10003;</div><div class="stage"><div class="candle bear"><div class="w" style="height:16px"></div><div class="b" style="height:150px"></div><div class="w" style="height:16px"></div></div></div><div class="cap">Sellers are in <span class="g">total control</span></div></div>
+    <div class="cell"><div class="mark no">&#10007;</div><div class="stage"><div class="candle bear"><div class="w" style="height:120px"></div><div class="b" style="height:54px"></div><div class="w" style="height:12px"></div></div></div><div class="cap">Sellers were active but got <span class="g">rejected by buyers</span></div></div>
+    <div class="cell"><div class="mark no">&#10007;</div><div class="stage"><div class="candle bear"><div class="w" style="height:12px"></div><div class="b" style="height:60px"></div><div class="w" style="height:120px"></div></div></div><div class="cap">Sellers won but there is <span class="g">no clear direction</span></div></div>
+    <div class="cell"><div class="mark ok">&#10003;</div><div class="stage"><div class="candle bear"><div class="w" style="height:130px"></div><div class="b" style="height:34px"></div><div class="w" style="height:14px"></div></div></div><div class="cap">Buyers showed up but <span class="g">sellers are in control</span></div></div>
   </div>
-
-  <div class="legend">
-    <div><span class="chip up"></span> Bullish candle</div>
-    <div><span class="chip dn"></span> Bearish candle</div>
-  </div>
-
+  <div class="legend"><div><span class="chip up"></span> Bullish candle</div><div><span class="chip dn"></span> Bearish candle</div></div>
   <div class="sig">Gold Empire &nbsp;·&nbsp; <b>Survive First</b> &nbsp;·&nbsp; Matthew</div>
 </section>
 
 <!-- ================= SLIDE 2 ================= -->
 <section class="slide" id="s2">
-  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">02 / 03</span></div>
+  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">02 / 07</span></div>
   <p class="eyebrow">Not every breakout is worth your capital.</p>
   <h1 class="title-xl">CANDLESTICK<br><span class="accent">BREAKOUTS</span></h1>
   <div class="rule"></div>
-
   <div class="two">
-    <!-- weak -->
     <div class="col">
       <div class="panel">
         <div class="lvl" style="top:150px"><span>62%</span></div>
@@ -193,11 +176,10 @@ h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;line
           <div class="candle bull"><div class="w" style="height:10px"></div><div class="b" style="height:110px"></div><div class="w" style="height:10px"></div></div>
           <div class="candle bull"><div class="w" style="height:12px"></div><div class="b" style="height:220px"></div><div class="w" style="height:12px"></div></div>
         </div>
-        <div class="tag" style="right:20px;top:210px;color:var(--bad)">&#10007; DO NOT ENTER</div>
+        <div class="tag" style="right:12px;top:150px;color:var(--bad)">&#10007; DO NOT ENTER</div>
       </div>
       <div class="verdict no"><div class="big">Weak breakout</div><div class="sub">No retest candle</div></div>
     </div>
-    <!-- strong -->
     <div class="col">
       <div class="panel">
         <div class="lvl" style="top:150px"><span>62%</span></div>
@@ -212,22 +194,19 @@ h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;line
       <div class="verdict ok"><div class="big">Strong breakout</div><div class="sub">Enter after the retest</div></div>
     </div>
   </div>
-
-  <p class="foot-note">When trading breakouts, always watch the <span class="g">2nd candle</span>. Price usually likes to <span class="g">pull back to ~62%</span> of the 1st candle before it runs.</p>
-
+  <p class="foot-note">When trading breakouts, always watch the <span class="g">2nd candle</span>. Price usually (not always) likes to <span class="g">pull back to ~62%</span> of the 1st candle before it runs.</p>
   <div class="sig">Gold Empire &nbsp;·&nbsp; <b>Survive First</b> &nbsp;·&nbsp; Matthew</div>
 </section>
 
 <!-- ================= SLIDE 3 ================= -->
 <section class="slide" id="s3">
-  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">03 / 03</span></div>
+  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">03 / 07</span></div>
   <p class="eyebrow">A reversal you can actually trust.</p>
-  <h1 class="title-lg">THE PIERCING<br><span class="accent">CANDLESTICK</span></h1>
+  <h1 class="title-lg">THE FOREX PIERCING<br><span class="accent">CANDLESTICK</span></h1>
   <div class="rule"></div>
-
   <div class="quad">
-    <div class="q">
-      <div class="qhead"><span class="ck">&#10003;</span><h3>Piercing</h3></div>
+    <div class="q tl">
+      <div class="qhead"><span class="ck">&#10003;</span><h3>Forex Piercing</h3></div>
       <div class="pierce">
         <div class="lvl50"><span>50%</span></div>
         <div class="arrow" style="left:34px;top:70px;color:var(--down)">&#8600;</div>
@@ -237,8 +216,8 @@ h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;line
       </div>
       <div class="qcap">Small / no gap</div>
     </div>
-    <div class="q">
-      <div class="qhead"><span class="ck">&#10003;</span><h3>Non-Piercing</h3></div>
+    <div class="q tr">
+      <div class="qhead"><span class="ck">&#10003;</span><h3>Non-Forex Piercing</h3></div>
       <div class="pierce">
         <div class="lvl50"><span>50%</span></div>
         <div class="arrow" style="left:34px;top:70px;color:var(--down)">&#8600;</div>
@@ -249,9 +228,241 @@ h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;line
       <div class="qcap">Gap down</div>
     </div>
   </div>
+  <p class="explain">After a red candle, a bullish one that closes <span class="g">above the 50% midpoint</span> shows buyers stepping in — a piercing reversal. A <span class="g">gap down</span> that gets bought back is the stronger version.</p>
+  <div class="sig">Gold Empire &nbsp;·&nbsp; <b>Survive First</b> &nbsp;·&nbsp; Matthew</div>
+</section>
 
-  <p class="explain">After a red candle, a green one that closes <span class="g">above the 50% midpoint</span> shows buyers stepping in — a piercing reversal. A <span class="g">gap down</span> that gets bought back is the stronger version.</p>
+<!-- ================= SLIDE 4 : CONFIRMATION ================= -->
+<section class="slide" id="s4">
+  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">04 / 07</span></div>
+  <p class="eyebrow">Know when the pattern is already complete.</p>
+  <h1 class="title-lg">THE CONFIRMATION<br><span class="accent">CANDLESTICK</span></h1>
+  <div class="rule"></div>
+  <div class="quad rows2">
+    <!-- Q1 bullish engulfing -->
+    <div class="q tl">
+      <div class="cq p4">
+        <span class="arrow" style="right:26px;top:20px;color:var(--good)">&#8599;</span>
+        <div class="candle bear"><div class="w" style="height:12px"></div><div class="b" style="height:70px"></div><div class="w" style="height:12px"></div></div>
+        <div class="candle bull"><div class="w" style="height:14px"></div><div class="b" style="height:150px"></div><div class="w" style="height:14px"></div></div>
+      </div>
+      <div class="ctext"><span class="g">Bullish engulfing</span> has its confirmation <b>within</b> the pattern</div>
+    </div>
+    <!-- Q2 red hammer -->
+    <div class="q tr">
+      <div class="cq p4">
+        <span class="arrow" style="right:22px;top:14px;color:var(--good)">&#8599;</span>
+        <div class="candle bear"><div class="w" style="height:8px"></div><div class="b" style="height:44px"></div><div class="w" style="height:110px"></div></div>
+        <div class="candle bull" style="margin-bottom:60px"><div class="w" style="height:12px"></div><div class="b" style="height:120px"></div><div class="w" style="height:12px"></div></div>
+      </div>
+      <div class="ctext">A <span class="g">"red" hammer</span> needs an extra confirmation candle</div>
+    </div>
+    <!-- Q3 bearish engulfing -->
+    <div class="q bl">
+      <div class="cq p4">
+        <span class="arrow" style="right:26px;bottom:16px;color:var(--bad)">&#8600;</span>
+        <div class="candle bull"><div class="w" style="height:12px"></div><div class="b" style="height:70px"></div><div class="w" style="height:12px"></div></div>
+        <div class="candle bear"><div class="w" style="height:14px"></div><div class="b" style="height:150px"></div><div class="w" style="height:14px"></div></div>
+      </div>
+      <div class="ctext"><span class="g">Bearish engulfing</span> has its confirmation <b>within</b> the pattern</div>
+    </div>
+    <!-- Q4 green shooting star -->
+    <div class="q br">
+      <div class="cq p4">
+        <span class="arrow" style="right:22px;bottom:14px;color:var(--bad)">&#8600;</span>
+        <div class="candle bull"><div class="w" style="height:110px"></div><div class="b" style="height:44px"></div><div class="w" style="height:8px"></div></div>
+        <div class="candle bear" style="margin-top:60px"><div class="w" style="height:12px"></div><div class="b" style="height:120px"></div><div class="w" style="height:12px"></div></div>
+      </div>
+      <div class="ctext">A <span class="g">"green" shooting star</span> needs an extra confirmation candle</div>
+    </div>
+  </div>
+  <div class="sig">Gold Empire &nbsp;·&nbsp; <b>Survive First</b> &nbsp;·&nbsp; Matthew</div>
+</section>
 
+<!-- ================= SLIDE 5 : TRIPLE ================= -->
+<section class="slide" id="s5">
+  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">05 / 07</span></div>
+  <p class="eyebrow">Three candles that call the turn.</p>
+  <h1 class="title-lg">THE TRIPLE<br><span class="accent">CANDLESTICKS</span></h1>
+  <div class="rule"></div>
+  <div class="g6">
+    <!-- Morning Star -->
+    <div class="c bd-r bd-b">
+      <div class="pat p5">
+        <span class="parr" style="left:8px;top:24px;color:var(--down)">&#8600;</span>
+        <div class="candle bear" style="margin-bottom:60px"><div class="w" style="height:10px"></div><div class="b" style="height:100px"></div><div class="w" style="height:10px"></div></div>
+        <div class="candle bear"><div class="w" style="height:16px"></div><div class="b" style="height:20px"></div><div class="w" style="height:16px"></div></div>
+        <div class="candle bull" style="margin-bottom:60px"><div class="w" style="height:10px"></div><div class="b" style="height:100px"></div><div class="w" style="height:10px"></div></div>
+        <span class="parr" style="right:8px;top:14px;color:var(--good)">&#8599;</span>
+      </div>
+      <div class="capp">Morning <span class="g">Star</span></div>
+    </div>
+    <!-- Three White Soldiers -->
+    <div class="c bd-r bd-b">
+      <div class="pat p5">
+        <div class="candle bull"><div class="w" style="height:10px"></div><div class="b" style="height:70px"></div><div class="w" style="height:10px"></div></div>
+        <div class="candle bull" style="margin-bottom:45px"><div class="w" style="height:10px"></div><div class="b" style="height:70px"></div><div class="w" style="height:10px"></div></div>
+        <div class="candle bull" style="margin-bottom:90px"><div class="w" style="height:10px"></div><div class="b" style="height:70px"></div><div class="w" style="height:10px"></div></div>
+        <span class="parr" style="right:2px;top:6px;color:var(--good)">&#8599;</span>
+      </div>
+      <div class="capp">Three White <span class="g">Soldiers</span></div>
+    </div>
+    <!-- Three Inside Up -->
+    <div class="c bd-b">
+      <div class="pat p5">
+        <span class="parr" style="left:6px;top:20px;color:var(--down)">&#8600;</span>
+        <div class="candle bear"><div class="w" style="height:10px"></div><div class="b" style="height:120px"></div><div class="w" style="height:10px"></div></div>
+        <div class="candle bull" style="margin-bottom:40px"><div class="w" style="height:8px"></div><div class="b" style="height:48px"></div><div class="w" style="height:8px"></div></div>
+        <div class="candle bull" style="margin-bottom:70px"><div class="w" style="height:10px"></div><div class="b" style="height:90px"></div><div class="w" style="height:10px"></div></div>
+        <span class="parr" style="right:6px;top:6px;color:var(--good)">&#8599;</span>
+      </div>
+      <div class="capp">Three Inside <span class="g">Up</span></div>
+    </div>
+    <!-- Evening Star -->
+    <div class="c bd-r">
+      <div class="pat p5">
+        <span class="parr" style="left:8px;bottom:10px;color:var(--good)">&#8599;</span>
+        <div class="candle bull"><div class="w" style="height:10px"></div><div class="b" style="height:100px"></div><div class="w" style="height:10px"></div></div>
+        <div class="candle bull" style="margin-bottom:130px"><div class="w" style="height:16px"></div><div class="b" style="height:20px"></div><div class="w" style="height:16px"></div></div>
+        <div class="candle bear"><div class="w" style="height:10px"></div><div class="b" style="height:100px"></div><div class="w" style="height:10px"></div></div>
+        <span class="parr" style="right:8px;bottom:6px;color:var(--down)">&#8600;</span>
+      </div>
+      <div class="capp">Evening <span class="g">Star</span></div>
+    </div>
+    <!-- Three Black Crows -->
+    <div class="c bd-r">
+      <div class="pat p5">
+        <span class="parr" style="left:2px;bottom:6px;color:var(--good)">&#8599;</span>
+        <div class="candle bear" style="margin-bottom:90px"><div class="w" style="height:10px"></div><div class="b" style="height:70px"></div><div class="w" style="height:10px"></div></div>
+        <div class="candle bear" style="margin-bottom:45px"><div class="w" style="height:10px"></div><div class="b" style="height:70px"></div><div class="w" style="height:10px"></div></div>
+        <div class="candle bear"><div class="w" style="height:10px"></div><div class="b" style="height:70px"></div><div class="w" style="height:10px"></div></div>
+        <span class="parr" style="right:2px;bottom:6px;color:var(--down)">&#8600;</span>
+      </div>
+      <div class="capp">Three Black <span class="g">Crows</span></div>
+    </div>
+    <!-- Three Inside Down -->
+    <div class="c">
+      <div class="pat p5">
+        <span class="parr" style="left:6px;bottom:8px;color:var(--good)">&#8599;</span>
+        <div class="candle bull" style="margin-bottom:60px"><div class="w" style="height:10px"></div><div class="b" style="height:120px"></div><div class="w" style="height:10px"></div></div>
+        <div class="candle bear" style="margin-bottom:40px"><div class="w" style="height:8px"></div><div class="b" style="height:48px"></div><div class="w" style="height:8px"></div></div>
+        <div class="candle bear"><div class="w" style="height:10px"></div><div class="b" style="height:90px"></div><div class="w" style="height:10px"></div></div>
+        <span class="parr" style="right:6px;bottom:6px;color:var(--down)">&#8600;</span>
+      </div>
+      <div class="capp">Three Inside <span class="g">Down</span></div>
+    </div>
+  </div>
+  <p class="explain" style="margin-top:44px">Top row calls a <span class="g">reversal up</span>, bottom row a <span class="g">reversal down</span>. Spot it early — then wait for your entry rules to line up before you commit.</p>
+  <div class="sig">Gold Empire &nbsp;·&nbsp; <b>Survive First</b> &nbsp;·&nbsp; Matthew</div>
+</section>
+
+<!-- ================= SLIDE 6 : BULLISH LIBRARY ================= -->
+<section class="slide" id="s6">
+  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">06 / 07</span></div>
+  <p class="eyebrow">Your bullish pattern cheat-sheet.</p>
+  <h1 class="title-lg">BULLISH<br><span class="accent">CANDLESTICKS</span></h1>
+  <div class="rule"></div>
+  <div class="g12">
+    <!-- Row 1 -->
+    <div class="c"><div class="patm p6">
+      <div class="candle bear" style="margin-bottom:36px"><div class="w" style="height:8px"></div><div class="b" style="height:56px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bear"><div class="w" style="height:8px"></div><div class="b" style="height:10px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bull" style="margin-bottom:36px"><div class="w" style="height:8px"></div><div class="b" style="height:56px"></div><div class="w" style="height:8px"></div></div>
+    </div><div class="capm">Bullish <span class="g">Abandoned</span></div></div>
+    <div class="c"><div class="patm p6">
+      <div class="candle bear" style="margin-bottom:34px"><div class="w" style="height:8px"></div><div class="b" style="height:58px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bear"><div class="w" style="height:8px"></div><div class="b" style="height:12px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bull" style="margin-bottom:34px"><div class="w" style="height:8px"></div><div class="b" style="height:60px"></div><div class="w" style="height:8px"></div></div>
+    </div><div class="capm">Morning <span class="g">Star</span></div></div>
+    <div class="c"><div class="patm p6">
+      <div class="candle bull"><div class="w" style="height:6px"></div><div class="b" style="height:8px"></div><div class="w" style="height:100px"></div></div>
+    </div><div class="capm">Dragonfly <span class="g">Doji</span></div></div>
+    <div class="c"><div class="patm p6">
+      <div class="candle bear"><div class="w" style="height:10px"></div><div class="b" style="height:80px"></div><div class="w" style="height:10px"></div></div>
+      <div class="candle bull"><div class="w" style="height:10px"></div><div class="b" style="height:80px"></div><div class="w" style="height:10px"></div></div>
+    </div><div class="capm">Tweezer <span class="g">Bottom</span></div></div>
+    <!-- Row 2 -->
+    <div class="c"><div class="patm p6">
+      <div class="candle bull"><div class="w" style="height:6px"></div><div class="b" style="height:34px"></div><div class="w" style="height:80px"></div></div>
+    </div><div class="capm"><span class="g">Hammer</span></div></div>
+    <div class="c"><div class="patm p6">
+      <div class="candle bull"><div class="w" style="height:8px"></div><div class="b" style="height:78px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bear" style="margin-bottom:26px"><div class="w" style="height:6px"></div><div class="b" style="height:22px"></div><div class="w" style="height:6px"></div></div>
+      <div class="candle bear" style="margin-bottom:38px"><div class="w" style="height:6px"></div><div class="b" style="height:22px"></div><div class="w" style="height:6px"></div></div>
+      <div class="candle bear" style="margin-bottom:50px"><div class="w" style="height:6px"></div><div class="b" style="height:22px"></div><div class="w" style="height:6px"></div></div>
+      <div class="candle bull"><div class="w" style="height:8px"></div><div class="b" style="height:92px"></div><div class="w" style="height:8px"></div></div>
+    </div><div class="capm">Rising Three <span class="g">Method</span></div></div>
+    <div class="c"><div class="patm p6">
+      <div class="candle bear" style="margin-bottom:18px"><div class="w" style="height:8px"></div><div class="b" style="height:44px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bull"><div class="w" style="height:8px"></div><div class="b" style="height:90px"></div><div class="w" style="height:8px"></div></div>
+    </div><div class="capm">Bullish <span class="g">Engulfing</span></div></div>
+    <div class="c"><div class="patm p6">
+      <div class="candle bull"><div class="b" style="height:110px"></div></div>
+    </div><div class="capm">Bullish <span class="g">Marubozu</span></div></div>
+    <!-- Row 3 -->
+    <div class="c"><div class="patm p6">
+      <div class="candle bear"><div class="w" style="height:8px"></div><div class="b" style="height:60px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bull" style="margin-bottom:24px"><div class="w" style="height:8px"></div><div class="b" style="height:78px"></div><div class="w" style="height:8px"></div></div>
+    </div><div class="capm">Bullish Separating <span class="g">Lines</span></div></div>
+    <div class="c"><div class="patm p6">
+      <div class="candle bull" style="margin-bottom:24px"><div class="w" style="height:8px"></div><div class="b" style="height:70px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bear"><div class="w" style="height:8px"></div><div class="b" style="height:70px"></div><div class="w" style="height:8px"></div></div>
+    </div><div class="capm">Bullish Meeting <span class="g">Lines</span></div></div>
+    <div class="c"><div class="patm p6">
+      <div class="candle bull"><div class="w" style="height:6px"></div><div class="b" style="height:44px"></div><div class="w" style="height:6px"></div></div>
+      <div class="candle bull" style="margin-bottom:26px"><div class="w" style="height:6px"></div><div class="b" style="height:44px"></div><div class="w" style="height:6px"></div></div>
+      <div class="candle bull" style="margin-bottom:52px"><div class="w" style="height:6px"></div><div class="b" style="height:44px"></div><div class="w" style="height:6px"></div></div>
+    </div><div class="capm">Three White <span class="g">Soldiers</span></div></div>
+    <div class="c"><div class="patm p6">
+      <div class="candle bull"><div class="w" style="height:80px"></div><div class="b" style="height:34px"></div><div class="w" style="height:6px"></div></div>
+    </div><div class="capm">Inverted <span class="g">Hammer</span></div></div>
+  </div>
+  <div class="sig">Gold Empire &nbsp;·&nbsp; <b>Survive First</b> &nbsp;·&nbsp; Matthew</div>
+</section>
+
+<!-- ================= SLIDE 7 : HEARTBEAT ================= -->
+<section class="slide" id="s7">
+  <div class="brand"><span>Gold Empire</span><span class="crown">👑</span><span class="num">07 / 07</span></div>
+  <p class="eyebrow">Trading gold will test your nerves.</p>
+  <h1 class="title-lg">SURVIVE <span class="accent">FIRST</span></h1>
+  <div class="rule"></div>
+
+  <div class="hbwrap">
+    <div class="hblabel">A normal person's <span class="g">heartbeat</span></div>
+    <svg class="hbline" viewBox="0 0 940 200" preserveAspectRatio="none">
+      <polyline fill="none" stroke="var(--ecg)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"
+      points="0,110 60,110 72,92 86,110 110,110 120,132 132,44 146,158 158,110 190,110 205,96 220,110
+              250,110 310,110 322,92 336,110 360,110 370,132 382,44 396,158 408,110 440,110 455,96 470,110
+              500,110 560,110 572,92 586,110 610,110 620,132 632,44 646,158 658,110 690,110 705,96 720,110
+              750,110 810,110 822,92 836,110 860,110 870,132 882,44 896,158 908,110 940,110"/>
+    </svg>
+  </div>
+
+  <div class="hbwrap" style="margin-top:64px">
+    <div class="hblabel">A <span class="g">gold trader's</span> heartbeat</div>
+    <svg class="hbline" viewBox="0 0 940 200" preserveAspectRatio="none">
+      <polyline fill="none" stroke="var(--ecg)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"
+      points="0,110 40,110 52,92 66,110 90,110 100,132 112,44 126,158 138,110 300,110"/>
+      <polyline fill="none" stroke="var(--ecg)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"
+      points="640,110 690,110 702,92 716,110 740,110 750,132 762,44 776,158 788,110 820,110 835,96 850,110
+              880,110 892,132 904,44 918,158 928,110 940,110"/>
+    </svg>
+    <!-- candlestick chaos where the pulse should be -->
+    <div class="hbchart" style="left:300px;right:340px;top:96px">
+      <div class="candle bull p6" style="margin-bottom:50px"><div class="w" style="height:8px"></div><div class="b" style="height:40px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bull p6" style="margin-bottom:70px"><div class="w" style="height:10px"></div><div class="b" style="height:52px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bear p6" style="margin-bottom:60px"><div class="w" style="height:8px"></div><div class="b" style="height:30px"></div><div class="w" style="height:14px"></div></div>
+      <div class="candle bull p6" style="margin-bottom:86px"><div class="w" style="height:8px"></div><div class="b" style="height:44px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bear p6" style="margin-bottom:64px"><div class="w" style="height:12px"></div><div class="b" style="height:38px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bull p6" style="margin-bottom:96px"><div class="w" style="height:8px"></div><div class="b" style="height:34px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bear p6" style="margin-bottom:58px"><div class="w" style="height:10px"></div><div class="b" style="height:46px"></div><div class="w" style="height:10px"></div></div>
+      <div class="candle bear p6" style="margin-bottom:34px"><div class="w" style="height:8px"></div><div class="b" style="height:40px"></div><div class="w" style="height:12px"></div></div>
+      <div class="candle bull p6" style="margin-bottom:70px"><div class="w" style="height:8px"></div><div class="b" style="height:36px"></div><div class="w" style="height:8px"></div></div>
+      <div class="candle bear p6" style="margin-bottom:20px"><div class="w" style="height:10px"></div><div class="b" style="height:42px"></div><div class="w" style="height:10px"></div></div>
+    </div>
+  </div>
+
+  <p class="explain" style="margin-top:120px">Most traders don't lose on strategy — they lose their nerve. <span class="g">Manage your risk first</span>, and the chart stops running your pulse.</p>
   <div class="sig">Gold Empire &nbsp;·&nbsp; <b>Survive First</b> &nbsp;·&nbsp; Matthew</div>
 </section>
 
